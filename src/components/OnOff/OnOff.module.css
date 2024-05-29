@@ -1,0 +1,27 @@
+.block{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.rect{
+    border: 2px solid black;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+}
+
+.rectGreen{
+    background-color: #07a447;
+}
+
+.rectRed{
+    background-color: #e7482e;
+}
+
+.circle{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
