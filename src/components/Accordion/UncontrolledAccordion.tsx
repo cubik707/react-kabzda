@@ -10,8 +10,8 @@ function Accordion(props: AccordionPropsType) {
     const [collapsed, setCollapsed] = useState(false);
     return (
         <div>
-            <AccordionTitle title={props.titleValue}/>
-            <button onClick={()=>{setCollapsed(!collapsed)}}>TOGGLE</button>
+            <AccordionTitle onClick={()=>{setCollapsed(!collapsed)}} title={props.titleValue}/>
+            {/*<button onClick={()=>{setCollapsed(!collapsed)}}>TOGGLE</button>*/}
             { !collapsed && <AccordionBody/>}
         </div>
 
@@ -20,9 +20,14 @@ function Accordion(props: AccordionPropsType) {
 
 }
 
-function AccordionTitle(props: any) {
+type AccordionTitlePropsType = {
+    title: string
+    onClick: () => void
+}
+
+function AccordionTitle(props: AccordionTitlePropsType) {
     console.log("AccordionTitle rendering")
-    return <h3>{props.title}</h3>
+    return <h3 onClick={props.onClick}>{props.title}</h3>
 }
 
 function AccordionBody() {
