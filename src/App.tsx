@@ -2,9 +2,9 @@ import './App.css';
 import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {useState} from "react";
-import Accordion from "./components/Accordion/Accordion";
+import {Accordion} from "./components/Accordion/Accordion";
 import UncontrolledOnOff from "./components/OnOff/UncontrolledOnOff";
-import OnOff from "./components/OnOff/OnOff";
+import {OnOff} from "./components/OnOff/OnOff";
 
 
 

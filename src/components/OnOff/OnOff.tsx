@@ -5,7 +5,7 @@ type OnOffPropsType = {
     onClick: (on: boolean) => void
 };
 
-function OnOff (props: OnOffPropsType) {
+export function OnOff (props: OnOffPropsType) {
 
     return (
         <div className={s.block}>
@@ -21,5 +21,3 @@ function OnOff (props: OnOffPropsType) {
 
     );
 };
-
-export default OnOff;
