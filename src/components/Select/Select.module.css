@@ -24,7 +24,7 @@
     border: 1px solid #484848;
 }
 
-.selectedItemOpen, .selectedItemOpen:hover{
+.selectedItemOpen, .selectedItemOpen:hover, .selectedItem:focus{
     outline: 1px solid #1d83e5;
     border: 1px solid #1d83e5;
 }
@@ -50,6 +50,6 @@
 
 }
 
-.item:hover{
+.item.selected {
     background-color: #dcdcdc;
 }
