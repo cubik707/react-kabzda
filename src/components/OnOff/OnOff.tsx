@@ -1,11 +1,14 @@
 import s from './OnOff.module.css'
+import {memo} from "react";
 
 type OnOffPropsType = {
     on: boolean
     onClick: (on: boolean) => void
 };
 
-export function OnOff (props: OnOffPropsType) {
+export const OnOff = memo(OnOffSecret)
+
+function OnOffSecret (props: OnOffPropsType) {
 
     return (
         <div className={s.block}>

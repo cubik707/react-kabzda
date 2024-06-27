@@ -1,3 +1,4 @@
+import React from "react";
 
 type ItemType = {
     title: string
@@ -12,7 +13,9 @@ type AccordionPropsType = {
     onClick: (value: any) => void
 }
 
-export function Accordion(props: AccordionPropsType) {
+export const Accordion = React.memo(AccordionSecret)
+
+export function AccordionSecret(props: AccordionPropsType) {
     console.log("Accordion rendering")
 
     return (

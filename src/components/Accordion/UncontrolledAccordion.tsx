@@ -1,5 +1,4 @@
-import {useReducer, useState} from "react";
-import {action} from "@storybook/addon-actions";
+import {memo, useReducer, useState} from "react";
 import {reducer, TOGGLE_COLLAPSED} from "./reducer";
 
 type AccordionPropsType = {
@@ -7,9 +6,9 @@ type AccordionPropsType = {
     // collapsed: boolean
 }
 
+export const UncontrolledAccordion = memo(UncontrolledAccordionSecret)
 
-
-export function UncontrolledAccordion(props: AccordionPropsType) {
+function UncontrolledAccordionSecret(props: AccordionPropsType) {
     console.log("Accordion rendering")
     // const [collapsed, setCollapsed] = useState(false);
     const [state, dispatch] = useReducer(reducer, {collapsed: false});
