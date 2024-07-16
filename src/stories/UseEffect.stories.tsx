@@ -49,6 +49,8 @@ export const SimpleTimeoutExample = () => {
     </>
 }
 
+const get2stringDigits = (num: number) => num < 10 ? "0" + num : num
+
 export const Clock = () => {
     const [time, setTime] = useState(new Date());
 
@@ -65,7 +67,11 @@ export const Clock = () => {
     return (
         <div>
             <h1>Current Time</h1>
-            <h2>{time.toLocaleTimeString()}</h2>
+            <span>{get2stringDigits(time.getHours())}</span>
+            :
+            <span>{get2stringDigits(time.getMinutes())}</span>
+            :
+            <span>{get2stringDigits(time.getSeconds())}</span>
         </div>
     );
 }
