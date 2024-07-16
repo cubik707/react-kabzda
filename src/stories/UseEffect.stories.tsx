@@ -4,7 +4,7 @@ export default {
     title: 'useEffect demo',
 }
 
-export const SimpleExample = () => {
+export const ClockAnalogExample = () => {
     console.log("SimpleExample");
     const [fake, setFake] = useState(1)
     const [counter, setCounter] = useState(1)
@@ -49,29 +49,3 @@ export const SimpleTimeoutExample = () => {
     </>
 }
 
-const get2stringDigits = (num: number) => num < 10 ? "0" + num : num
-
-export const Clock = () => {
-    const [time, setTime] = useState(new Date());
-
-    useEffect(() => {
-        const tick = () => {
-            setTime(new Date());
-        };
-
-        const intervalId = setInterval(tick, 1000);
-
-        return () => clearInterval(intervalId);
-    }, []);
-
-    return (
-        <div>
-            <h1>Current Time</h1>
-            <span>{get2stringDigits(time.getHours())}</span>
-            :
-            <span>{get2stringDigits(time.getMinutes())}</span>
-            :
-            <span>{get2stringDigits(time.getSeconds())}</span>
-        </div>
-    );
-}
